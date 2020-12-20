@@ -8,7 +8,7 @@ const gameResultDomP = document.querySelector(".game-result p");
 const rockDomDiv = document.getElementById("rck");
 const paperDomDiv = document.getElementById("ppr");
 const scissorsDomDiv = document.getElementById("scs");
-
+// random selection for computer
 const getComputerChoise = () => {
   const choices = ["rck", "ppr", "scs"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -21,6 +21,7 @@ const convert = (letter) => {
   if (letter === "ppr") return "Paper";
   if (letter === "scs") return "Scissors";
 };
+// if the player wins
 const win = (user, computer) => {
   userScore++;
   userScoreDomSpan.innerHTML = userScore;
@@ -34,6 +35,7 @@ const win = (user, computer) => {
     500
   );
 };
+// if the player loses
 const lose = (user, computer) => {
   computerScore++;
   computerScoreDomSpan.innerHTML = computerScore;
@@ -47,6 +49,7 @@ const lose = (user, computer) => {
     500
   );
 };
+// if the game is draw
 const draw = (user, computer) => {
   userScoreDomSpan.innerHTML = userScore;
   computerScoreDomSpan.innerHTML = computerScore;
@@ -59,6 +62,7 @@ const draw = (user, computer) => {
     500
   );
 };
+// results
 const game = (userChoise) => {
   const computerChoise = getComputerChoise();
   switch (userChoise + computerChoise) {

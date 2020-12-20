@@ -77,6 +77,9 @@ header h1 {
   font-weight: bold;
   font-size: 25px;
   margin-top: 100px;
+
+  position: relative;
+  bottom: 70px;
 }
 .green-border {
   border: 5px solid rgb(0, 184, 0);
@@ -89,4 +92,15 @@ header h1 {
 .grey-border {
   border: 5px solid rgb(32, 31, 31);
   box-shadow: 0 0 10px rgb(136, 133, 133);
+}
+footer {
+  top: 50px;
+  text-align: center;
+  position: relative;
+}
+#heart {
+  color: rgb(182, 0, 0);
+}
+footer::selection {
+  color: red;
 }
